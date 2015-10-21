@@ -1,2 +1,3 @@
 image: golang:1.5.1
-command: echo testing && go version
+run:
+ test: echo testing && go version
