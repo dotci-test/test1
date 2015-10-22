@@ -1,2 +1,3 @@
+before: "docker version"
 run:
-  golang: echo testing && go version
+  golang: "echo testing && go version"
