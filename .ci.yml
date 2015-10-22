@@ -1,3 +1,4 @@
+before_run: "echo 'test' && echo $PWD"
 before: "docker version"
 run:
   golang: "go version"
