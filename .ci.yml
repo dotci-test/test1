@@ -1,3 +1,4 @@
 before: "docker version"
 run:
-  golang: "echo testing && go version"
+  golang: "go version"
+  node: "node -v"
