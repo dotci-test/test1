@@ -1,4 +1,18 @@
 golang:
+  dns: 8.8.8.8
   image: golang:1.5.1
+  links:
+    - postgres
+  volumes:
+    - ./:/go/src/github.com/dotci-test/test1
+  working_dir: /go/src/github.com/dotci-test/test1
+
 node:
   image: node:0.10.40
+  links:
+    - postgres
+
+postgres:
+  image: postgres:9.4
+  ports:
+    - "5432:5432"
