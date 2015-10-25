@@ -1,4 +1,4 @@
-before: "docker version"
+before: "docker version && pwd"
 run:
   golang: "pwd && go get github.com/lib/pq && go test -v ./..."
   node: "node -v"
