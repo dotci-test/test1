@@ -1,4 +1,3 @@
 before: "docker version && docker-compose version && echo $COMPOSE_PROJECT_NAME"
 run:
   golang: "sh -xc 'go version'"
-  node: "sh -xc 'node -v'"
