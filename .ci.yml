@@ -1,4 +1,4 @@
-before: "docker version"
+before: "docker version && docker-compose version && echo $COMPOSE_PROJECT_NAME"
 run:
   golang: "go version"
   node: "node -v"
