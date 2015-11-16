@@ -1,7 +1,7 @@
-before_run: "before_run.sh"
-before_each: "before_each.sh"
+before_run: "pwd && ls -lah && ./before_run.sh"
+before_each: "pwd && ls -lah && ./before_each.sh"
 run:
   golang: "go version"
   node: "node -v"
-after_each: "after_each.sh"
-after_run: "after_run.sh"
+after_each: "pwd && ls -lah && ./after_each.sh"
+after_run: "pwd && ls -lah && ./after_run.sh"
