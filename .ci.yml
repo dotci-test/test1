@@ -1,5 +1,7 @@
-before_run: "date +%s"
-before: "docker version"
+before_run: "before_run.sh"
+before_each: "before_each.sh"
 run:
   golang: "go version"
   node: "node -v"
+after_each: "after_each.sh"
+after_run: "after_run.sh"
