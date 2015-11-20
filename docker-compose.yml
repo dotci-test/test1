@@ -2,3 +2,5 @@ golang:
   image: golang:1.5.1
 node:
   image: node:0.10.40
+node2:
+  image: node:0.10.40

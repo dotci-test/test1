@@ -2,3 +2,4 @@ before: 'docker-compose -f docker-compose.yml run -T golang sh -xc "go version" 
 run:
   golang: 'sh -xc "go version"'
   node: 'sh -xc "node -v"'
+  node2: 'sh -xc "echo test2"'
