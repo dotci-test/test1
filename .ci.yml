@@ -1,5 +1,5 @@
 before: 'docker-compose -f docker-compose.yml run -T golang sh -xc "go version" && docker ps -a'
-sub_build_tag: dotci
+sub_build_tag: "$NODE_NAME"
 run:
   golang: 'sh -xc "go version"'
   node: 'sh -xc "node -v"'
