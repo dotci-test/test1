@@ -1,5 +1,9 @@
 before: 'docker-compose -f docker-compose.yml run -T golang sh -xc "go version" && docker ps -a'
+sub_build_label: "$NODE_NAME"
+before_each: exit 1
 run:
-  golang: 'sh -xc "go version"'
   node: 'sh -xc "node -v"'
-  node2: 'sh -xc "echo test2"'
+  node2: 'sh -xc "node -v"'
+  node3: 'sh -xc "node -v"'
+  node4: 'sh -xc "node -v"'
+  node5: 'sh -xc "node -v"'
