@@ -1,4 +1,4 @@
-before: 'docker-compose -f docker-compose.yml run -T golang sh -xc "go version" && docker ps -a'
+before_run: 'exit 1'
 run:
   golang: go version
   node: node -v
