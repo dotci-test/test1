@@ -1,3 +1,4 @@
+before_run: sleep 15 && exit 1
 run:
   golang: sleep 200
   node: sleep 200
