@@ -1,5 +1,5 @@
-before: 'docker-compose -f docker-compose.yml run -T golang sh -xc "go version" && docker ps -a'
+sub_build_label: "$NODE_NAME"
 run:
-  golang: sleep 200
-  node: sleep 200
-  node2: sleep 200
+  golang: '"go version && echo done && echo -e '\033[31mRed\033[0m'"'
+  node: '"npm install && node -v && echo -e '\033[31mRed\033[0m'"'
+  node2: '"npm install && node -v && echo -e '\033[31mRed\033[0m'"'

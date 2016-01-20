@@ -1,6 +1,31 @@
 golang:
   image: golang:1.5.3
+  environment:
+    - TERM=xterm
+  tty: true
+  entrypoint:
+    - /bin/bash
+    - -c
+    - -x
+  command: "go version && echo done && echo -e '\033[31mRed\033[0m'"
+
 node:
-  image: node:0.10.40
+  image: node:5-onbuild
+  entrypoint:
+    - /bin/bash
+    - -c
+  command: "npm install && node -v && echo -e '\033[31mRed\033[0m'"
+#  tty: true
+#  environment:
+#    - TERM=ansi
+
 node2:
-  image: node:0.10.40
+  image: node:5-onbuild
+  entrypoint:
+    - /bin/bash
+    - -c
+    - -x
+  tty: true
+  environment:
+    - TERM=xterm
+  command: "npm install && node -v && echo -e '\033[31mRed\033[0m'"
