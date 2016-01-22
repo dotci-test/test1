@@ -1,5 +1,2 @@
-sub_build_label: "$NODE_NAME"
 run:
-  golang: '"go version && echo done && echo -e '\033[31mRed\033[0m'"'
-  node: '"npm install && node -v && echo -e '\033[31mRed\033[0m'"'
-  node2: '"npm install && node -v && echo -e '\033[31mRed\033[0m'"'
+  node:
