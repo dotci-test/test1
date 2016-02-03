@@ -1,7 +1,16 @@
-before:
-	- echo "command 1"
-	- echo "command 2"
+before_run:
+  - echo "before_run 1"
+  - echo "before_run 2"
+before_each:
+  - echo "before_each 1"
+  - echo "before_each 2"
 run:
   golang: go version
   node: node -v
   node2: echo test2
+after_each:
+  - echo "after_each 1"
+  - echo "after_each 2"
+after_run:
+  - echo "after_run 1"
+  - echo "after_run 2"
